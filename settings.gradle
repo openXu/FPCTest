@@ -1,0 +1,8 @@
+include ':app'
+//包含库工程
+include ':FpcLibsProject'
+project (':FpcLibsProject').projectDir = new File('../FpcLibsProject/')
+include ':FpcLibsProject:library_db'
+include ':FpcLibsProject:library_base'
+include ':FpcLibsProject:module_inspection'
+include ':FpcLibsProject:module_base'
