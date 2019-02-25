@@ -5,7 +5,7 @@ import java.util.Date;
 
 import androidx.databinding.BindingConversion;
 
-public class DateUtils {
+public class    DateUtils {
     /**
      * date2Str()方法在那个类中不重要，重要的是@BindingConversion注解
      */

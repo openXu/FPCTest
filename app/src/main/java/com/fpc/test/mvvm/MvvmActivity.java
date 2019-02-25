@@ -6,7 +6,6 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.fpc.test.R;
 import com.fpc.test.databinding.ActivityMvvmBinding;
 import com.fzy.libs.base.BaseActivity;
-import com.fzy.libs.router.RouterActivityPath;
 import com.fzy.libs.router.RouterActivityPath_General;
 
 

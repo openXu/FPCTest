@@ -1,7 +1,7 @@
 package com.fpc.test;
 
 import com.fzy.libs.base.BaseApplication;
-import com.fzy.libs.config.BaseLibInitLogic;
+import com.fzy.libs.app_init.BaseLibInitLogic;
 
 
 public class MyApplication extends BaseApplication {
@@ -9,11 +9,5 @@ public class MyApplication extends BaseApplication {
     public void onCreate() {
         super.onCreate();
 
-    }
-
-    @Override
-    protected void initLogic() {
-        //初始化基础模块
-        registerApplicationLogic(BaseLibInitLogic.class);
     }
 }

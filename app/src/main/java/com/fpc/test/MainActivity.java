@@ -41,6 +41,7 @@ public class MainActivity extends BaseActivity {
         list.add(new MainItem(4,"消息"));
         list.add(new MainItem(5,"数据库"));
 
+
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         binding.recyclerView.setAdapter(new MainItemAdapter(list){
             @Override
