@@ -4,8 +4,8 @@
     <data>
         <import type="com.fzy.mbase.entry.User"/>
         <variable name="user" type="User"/>
-        <import type="com.fpc.test.mvvm.UserViewModel"/>
-        <variable name="viewModel" type="UserViewModel"/>
+        <import type="com.fzy.libs.base.BaseViewModel"/>
+        <variable name="viewModel" type="BaseViewModel"/>
     </data>
     <LinearLayout
         android:layout_width="match_parent"
