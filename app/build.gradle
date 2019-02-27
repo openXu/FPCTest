@@ -35,7 +35,7 @@ android {
     }
 
     //开启Data Binding
-    dataBinding{
+    dataBinding {
         enabled = true
     }
 
@@ -50,11 +50,10 @@ dependencies {
 //    implementation rootProject.ext.dependencies["butterknife"]
 //    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
 
-
-    implementation"com.google.dagger:dagger:2.14.1"
-    annotationProcessor"com.google.dagger:dagger-compiler:2.14.1"
-
     //组件中依赖阿里路由编译框架
+    implementation 'androidx.appcompat:appcompat:1.0.0-alpha1'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0-alpha1'
     annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
 
 }

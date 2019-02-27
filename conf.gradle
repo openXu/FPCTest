@@ -5,35 +5,8 @@ ext {
             /*app版本*/
             versionCode                : 13,
             versionName                : '1.2.5',
-
             appName                    : "\"领导监管\"",
-            /*发布时间在此修改 、平台版本*/
-            releaseTime                : "\"2017-09-01\"",
-            ptVersion                  : "\"1.0.0\"",
-            /*app存储文件夹名*/
-            APP_FILE_NAME              : "\"hb_wymonitor\"",
-            /*兼容android7.0传递URI主机，通常位app的包名+.fileprovider*/
-            AUTHORITIES                : "\"com.fzy.hbm.fileprovider\"",
-            //测试/生产 相同参数   高层建筑消防管理系统--消防监管
-            //ApplicationID用于登录时，根据用户信息和应用ID给予对应权限
-            ApplicationID              : "\"4ccfccaf-9da0-11e7-840e-fa163ea287f1\"",
-            //推送时会使用
-            PRODUCT_APP_ID             : "\"25223878435438118\"",
-            /*默认服务器端口*/
-            SERVER_PORT                : "58001",
-            /**不需要修改的*/
-            DEF_PRODUCT_APP_KEY        : "\"4132586325215245\"",
-            DEF_PRODUCT_APP_SECRET_KEY : "\"6238216327272752\"",
-            DEF_PRODUCT_APP_SECRET_IV  : "\"5673845356765276\"",
-            DEF_PRODUCT_APP_PRIVATE_KEY: "\"\"",
-            DEF_PRODUCT_APP_PUBLIC_KEY : "\"\"",
-            PRODUCT_SYSTEM_KEY         : "\"9999999999999999\"",
-            PRODUCT_SYSTEM_IV          : "\"9999999999999999\"",
-            //初始化token时使用
-            SYSTEM_USER_ACCOUNT        : "\"dexuser\"",
-            SYSTEM_USER_PASSWORD       : "\"iipplat123\"",
-            PRODUCT_DEX_VERSION        : "\"1.7\"",
-            PRODUCT_PROTOCOL_VERSION   : "\"1.6\""
+            baseUrl                : "\"http://open.iciba.com/\"",
     ]
 
     greendao = [

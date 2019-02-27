@@ -8,7 +8,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 
@@ -26,7 +26,7 @@ public class TestModel {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://open.iciba.com/") // 设置网络请求的Url地址
                 .addConverterFactory(GsonConverterFactory.create()) // 设置数据解析器
-                .addCallAdapterFactory(RxJavaCallAdapterFactory.create()) // 支持RxJava平台
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create()) // 支持RxJava平台
                 .build();
         //2. 创建 网络请求接口 的实例
         TestService request = retrofit.create(TestService.class);

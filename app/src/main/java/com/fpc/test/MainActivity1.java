@@ -10,9 +10,9 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.fpc.test.bean.MainItem;
 import com.fpc.test.databinding.ActivityMainBinding;
 import com.fpc.test.databinding.ItemActivityMainBinding;
-import com.fpc.test.mvp.view.NetTestActivity;
-import com.fpc.test.mvvm.MvvmActivity;
-import com.fzy.libs.base.BaseActivity;
+import com.fpc.test.mvp.view.NetTestActivity1;
+import com.fpc.test.mvvm.MvvmLoginActivity1;
+import com.fzy.libs.base.BaseActivity1;
 import com.fzy.libs.router.RouterActivityPath;
 
 import java.util.ArrayList;
@@ -25,7 +25,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-public class MainActivity extends BaseActivity {
+public class MainActivity1 extends BaseActivity1 {
 
     private ActivityMainBinding binding;
 
@@ -48,17 +48,17 @@ public class MainActivity extends BaseActivity {
             public void onItemClick(int position, MainItem data) {
                 switch (data.getId()){
                     case 1:
-                        startActivity(new Intent(mContext, MvvmActivity.class));
+                        startActivity(new Intent(mContext, MvvmLoginActivity1.class));
                         break;
                     case 2:
                         // 1. 应用内简单的跳转(通过URL跳转在'进阶用法'中)
                         ARouter.getInstance().build(RouterActivityPath.Common.PAGE_LOGIN).navigation();
                         break;
                     case 3:
-                        startActivity(new Intent(mContext, NetTestActivity.class));
+                        startActivity(new Intent(mContext, NetTestActivity1.class));
                         break;
                     case 4:
-                        startActivity(new Intent(mContext, NetTestActivity.class));
+                        startActivity(new Intent(mContext, NetTestActivity1.class));
                         break;
                 }
             }

@@ -5,12 +5,12 @@ import android.os.Bundle;
 import com.fpc.test.R;
 import com.fpc.test.mvp.bean.OneSentence;
 import com.fpc.test.mvp.presenter.TestPresenter;
-import com.fzy.libs.base.BaseActivity;
+import com.fzy.libs.base.BaseActivity1;
 
 import androidx.databinding.DataBindingUtil;
 
 
-public class NetTestActivity extends BaseActivity implements ITestView {
+public class NetTestActivity1 extends BaseActivity1 implements ITestView {
 
 
     TestPresenter presenter;
