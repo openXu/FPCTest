@@ -7,6 +7,7 @@ ext {
             versionName                : '1.2.5',
             appName                    : "\"领导监管\"",
             baseUrl                : "\"http://open.iciba.com/\"",
+//            baseUrl                : "\"http://192.168.16.188:8030/railway/\"",
     ]
 
     greendao = [
