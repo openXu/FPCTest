@@ -1,4 +1,4 @@
-package com.fpc.test.mvvm;
+package com.fpc.test.util;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

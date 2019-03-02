@@ -51,7 +51,11 @@ dependencies {
 //    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
 
     //组件中依赖阿里路由编译框架
+//    implementation 'androidx.appcompat:appcompat:1.0.0-alpha1'
+//    implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
+//    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0-alpha1'
     implementation 'androidx.appcompat:appcompat:1.0.0-alpha1'
+    implementation 'com.google.android.material:material:1.0.0-alpha1'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0-alpha1'
     annotationProcessor rootProject.ext.dependencies["arouter-compiler"]

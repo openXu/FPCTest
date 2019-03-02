@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--data节点配置class属性，设置Binding全类名-->
+    <data>
+        
+        <variable name="cat" type="com.fpc.test.bean.Cat"/>
+        <variable name="dog" type="com.fpc.test.bean.Dog"/>
+        <variable name="man" type="Boolean"/>
+
+        <variable name="user" type="com.fzy.mbase.bean.User"/>
+
+        <variable name="viewModel" type="com.fpc.test.viewmodel.MvvmViewModel"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{cat.name + ' ' + cat.age}"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{dog.name + ' ' + dog.age}"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(man)}"/>
+
+        <!--layout支持LiveData-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.liveStr}"/>
+        <!--layout却不支持自定义bean的LiveData-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:text="@{String.valueOf(viewModel.user)}"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(viewModel.user)}"/>
+        <!--layout-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.oUser.userName}"/>
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="登陆"/>
+    </LinearLayout>
+</layout>
+

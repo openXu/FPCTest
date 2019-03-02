@@ -3,6 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.fpc.test">
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -13,21 +18,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:name, android:allowBackup, android:icon, android:label, android:theme, android:roundIcon">
-        <activity android:name=".MainActivity1">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".activity.MvvmTestActivity" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".mvp.view.NetTestActivity1" />
-        <activity android:name=".mvvm.MvvmLoginActivity1" />
 
         <service
             android:name=".service.MyService"
             android:exported="true" />
 
-        <activity android:name=".mvvm.MainActivity"></activity>
     </application>
 
 </manifest>

@@ -6,14 +6,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.fpc.test.activity.MvvmTestActivity;
 import com.fpc.test.bean.MainItem;
 import com.fpc.test.databinding.ActivityMainBinding;
 import com.fpc.test.databinding.ItemActivityMainBinding;
 import com.fpc.test.mvp.view.NetTestActivity1;
-import com.fpc.test.mvvm.MvvmLoginActivity1;
 import com.fzy.libs.base.BaseActivity1;
 import com.fzy.libs.router.RouterActivityPath;
+import com.fzy.libs.router.RouterActivityPath_Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,8 +26,8 @@ import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-
-public class MainActivity1 extends BaseActivity1 {
+@Route(path = RouterActivityPath_Test.PAGE_MAIN)
+public class MainActivity extends BaseActivity1 {
 
     private ActivityMainBinding binding;
 
@@ -41,14 +43,14 @@ public class MainActivity1 extends BaseActivity1 {
         list.add(new MainItem(4,"消息"));
         list.add(new MainItem(5,"数据库"));
 
-
+        binding.recyclerView.setBackgroundResource(R.mipmap.btn_login);
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         binding.recyclerView.setAdapter(new MainItemAdapter(list){
             @Override
             public void onItemClick(int position, MainItem data) {
                 switch (data.getId()){
                     case 1:
-                        startActivity(new Intent(mContext, MvvmLoginActivity1.class));
+                        startActivity(new Intent(mContext, MvvmTestActivity.class));
                         break;
                     case 2:
                         // 1. 应用内简单的跳转(通过URL跳转在'进阶用法'中)
