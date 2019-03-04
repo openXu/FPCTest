@@ -34,7 +34,7 @@ public class DesignActivity extends BaseActivity<ActivityDesignBinding, DesignVi
             Snackbar.make(binding.getRoot(), "标题", Snackbar.LENGTH_INDEFINITE)
                     .setAction("点击事件",view->{
                             FLog.i("点击了");
-                            FToast.normal("哈哈哈3").show();
+                            FToast.normal("哈哈哈3");
                     })
             .setDuration(BaseTransientBottomBar.LENGTH_LONG).show();
         });
