@@ -5,7 +5,6 @@ import android.app.Application;
 import com.fpc.test.bean.Anim;
 import com.fpc.test.bean.ObservableUser;
 import com.fzy.libs.base.BaseViewModel;
-import com.fzy.libs.http.HttpCallBack;
 import com.fzy.libs.http.NetworkManager;
 import com.fzy.libs.http.OneSentence;
 import com.fzy.libs.http.rx.BaseOberver;
