@@ -8,6 +8,7 @@ import com.fzy.libs.base.BaseViewModel;
 import com.fzy.libs.http.HttpCallBack;
 import com.fzy.libs.http.NetworkManager;
 import com.fzy.libs.http.OneSentence;
+import com.fzy.libs.http.rx.BaseOberver;
 import com.fzy.mbase.bean.User;
 
 import java.util.ArrayList;
@@ -57,19 +58,24 @@ public class MvvmViewModel extends BaseViewModel {
     public void login() {
         Map<String, String> params = new HashMap<>();
         params.put("date", "2019-02-22");
-        NetworkManager.getInstance().doGet1("dsapi/", params, new HttpCallBack<OneSentence>(){
+        NetworkManager.getInstance().doGetByRx("dsapi/", params, "", new BaseOberver<OneSentence>(){
             @Override
-            public void onSeccuce(OneSentence data) {
+            public void onStart() {
+            }
+
+            @Override
+            public void onSuccess(OneSentence response) {
                 List<User> users = new ArrayList<>();
                 users.add(new User("openxu List Login", "123456"));
-                 userList.setValue(users);
+                userList.setValue(users);
                 ((MutableLiveData<User>) user).setValue(new User("openxu single Login", "123456"));
                 ((MutableLiveData<Anim>) anim).setValue(new Anim("我是anim", 22));
                 ((MutableLiveData<String>) liveStr).setValue("我是liveStr");
                 oUser.setUserName("sdfsdfdsf");
             }
+
             @Override
-            public void onError(String msg) {
+            public void onFinish() {
 
             }
         });
