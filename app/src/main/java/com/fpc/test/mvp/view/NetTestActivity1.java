@@ -19,7 +19,7 @@ public class NetTestActivity1 extends BaseActivity1 implements ITestView {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mvpnet);
-        DataBindingUtil.setContentView(this,R.layout.activity_main);
+        DataBindingUtil.setContentView(this,R.layout.activity_base_main);
 //        btn_get.setOnClickListener(v -> {
 ////            new TestPresenter(this).getOneSentence();
 //            presenter.getOneSentence();

@@ -17,7 +17,7 @@ public class Anim {
 
     @Override
     public String toString() {
-        return "Anim{" +
+        return "HttpAnim{" +
                 "myName='" + myName + '\'' +
                 ", myAge=" + myAge +
                 '}';

@@ -1,15 +1,17 @@
 //app相关配置，app特有
 ext {
     appconfig = [
-            applicationId              : "com.fzy.hbm",
+            appType                    : "\"test\"",
+            applicationId              : "com.fzy.test",
             /*app版本*/
             versionCode                : 13,
             versionName                : '1.2.5',
             appName                    : "\"领导监管\"",
 //            baseUrl                : "\"http://open.iciba.com/\"",
-            baseUrl                : "\"http://47.105.168.178:8030/railway/\"",
-    ]
+            baseUrl                : "\"http://dev.fpc119.com:8001/\"",
 
+//            baseUrl                : "\"http://47.105.168.178:8030/railway/\"",
+    ]
     greendao = [
             dbName       : "\"zs119.db\"",//数据库名称
             schemaVersion: 2,//数据库版本号   20180123推送消息统一

@@ -10,10 +10,10 @@ import com.fpc.test.R;
 import com.fpc.test.bean.Cat;
 import com.fpc.test.viewmodel.MvvmViewModel;
 import com.fzy.libs.base.BaseActivity;
-import com.fzy.libs.router.RouterActivityPath_Test;
+import com.fzy.libs.router.RouterPath_Test;
 import com.fzy.mbase.bean.User;
 
-@Route(path = RouterActivityPath_Test.PAGE_MVVMTEST)
+@Route(path = RouterPath_Test.PAGE_MVVMTEST)
 public class MvvmTestActivity extends BaseActivity<ActivityMvvmTestBinding, MvvmViewModel> {
 
     @Override

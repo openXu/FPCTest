@@ -18,13 +18,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:name, android:allowBackup, android:icon, android:label, android:theme, android:roundIcon">
-  <!--      <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>-->
-        <activity android:name=".MainActivity"/>
+
+        <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.MvvmTestActivity" />
         <activity android:name=".design.DesignActivity" />
         <activity android:name=".mvp.view.NetTestActivity1" />
@@ -33,6 +28,7 @@
             android:name=".service.MyService"
             android:exported="true" />
 
+        <activity android:name=".activity.HttpTestActivity" />
     </application>
 
 </manifest>
