@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--data节点配置class属性，设置Binding全类名-->
+    <data>
+        <variable
+            name="viewModel"
+            type="com.fpc.test.viewmodel.LeakCanaryViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@id/toolBar"
+            style="@style/Toolbar"
+            app:title="内存泄漏"/>
+        <Button
+            android:id="@+id/btn_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mvp内存泄漏演示"/>
+        <Button
+            android:id="@+id/btn_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="内存泄漏修复"/>
+    </LinearLayout>
+</layout>
+

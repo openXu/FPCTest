@@ -3,32 +3,33 @@ package com.fpc.test.mvp.view;
 import android.os.Bundle;
 
 import com.fpc.test.R;
+import com.fpc.test.databinding.ActivityMvpLeakBinding;
 import com.fpc.test.mvp.bean.OneSentence;
 import com.fpc.test.mvp.presenter.TestPresenter;
-import com.fzy.libs.base.BaseActivity1;
+import com.fzy.libs.utils.FLog;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 
-public class NetTestActivity1 extends BaseActivity1 implements ITestView {
+public class LeakTestActivity extends AppCompatActivity implements ITestView {
 
-
-    TestPresenter presenter;
+    ActivityMvpLeakBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mvpnet);
-        DataBindingUtil.setContentView(this,R.layout.activity_base_main);
-//        btn_get.setOnClickListener(v -> {
-////            new TestPresenter(this).getOneSentence();
-//            presenter.getOneSentence();
-//        });
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_mvp_leak);
+        binding.btnGet.setOnClickListener(v -> {
+            new TestPresenter(this).getOneSentence();
+            finish();
+        });
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        FLog.w("LeakTestActivity.onDestroy()");
     }
 
     @Override

@@ -3,6 +3,7 @@ package com.fpc.test.design;
 
 import android.os.Bundle;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.fpc.test.databinding.ActivityDesignBinding;
 import com.fpc.test.viewmodel.DesignViewModel;
 import com.fzy.libs.base.BaseActivity;
@@ -35,6 +36,6 @@ public class DesignActivity extends BaseActivity<ActivityDesignBinding, DesignVi
                     })
             .setDuration(BaseTransientBottomBar.LENGTH_LONG).show();
         });
-        binding.btnTl.setOnClickListener(v->startActivity(RouterPath.MBase.PAGE_LOGIN));
+        binding.btnTl.setOnClickListener(v-> ARouter.getInstance().build(RouterPath.MBase.PAGE_LOGIN).navigation());
     }
 }

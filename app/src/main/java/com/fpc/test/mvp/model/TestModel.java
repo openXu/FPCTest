@@ -4,6 +4,8 @@ import com.fpc.test.mvp.bean.OneSentence;
 import com.fpc.test.mvp.callback.ITestCallback;
 import com.fpc.test.mvp.net.TestService;
 
+import java.io.IOException;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -32,18 +34,20 @@ public class TestModel {
         TestService request = retrofit.create(TestService.class);
         //3. 对 发送请求 进行封装
         Call<OneSentence> call = request.getSentence(date);
-        //4. 发送网络请求(异步)
-        call.enqueue(new Callback<OneSentence>() {
-            @Override
-            public void onResponse(Call<OneSentence> call, Response<OneSentence> response) {
-                callback.onSeccuce(response.body());
-            }
 
-            @Override
-            public void onFailure(Call<OneSentence> call, Throwable t) {
-                callback.onFaild("获取数据失败:" + t.getMessage());
-            }
-        });
-
+            new Thread(){
+                @Override
+                public void run() {
+                    super.run();
+                    try {
+                        Response<OneSentence> response = call.execute();
+                        Thread.sleep(3000);   //模拟耗时，引起内存泄漏
+                        callback.onSeccuce(response.body());
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        callback.onFaild("获取数据失败:" + e.getMessage());
+                    }
+                }
+            }.start();
     }
 }

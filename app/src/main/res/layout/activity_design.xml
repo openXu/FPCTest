@@ -11,16 +11,30 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@id/toolBar"
+            style="@style/Toolbar"
+            android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:titleMargin="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:title="Material Design"/>
+
         <Button
             android:id="@+id/btn_snackbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/toolBar"
+            android:textAllCaps="false"
             android:text="Snackbar" />
         <Button
             android:id="@+id/btn_tl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btn_snackbar"
+            android:textAllCaps="false"
             android:text="TextInputLayout" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton

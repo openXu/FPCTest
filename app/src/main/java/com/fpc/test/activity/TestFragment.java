@@ -60,12 +60,12 @@ public class TestFragment extends Fragment {
     public void onViewCreated(@NonNull View root, @Nullable Bundle savedInstanceState) {
         List<MainItem> list = new ArrayList<>();
         list.add(new MainItem(1,"mvvm"));
-        list.add(new MainItem(2,"路由"));
+        list.add(new MainItem(2,"内存泄露"));
         list.add(new MainItem(3,"网络请求"));
         list.add(new MainItem(4,"Notification"));
         list.add(new MainItem(5,"Design"));
         list.add(new MainItem(6,"数据库"));
-        binding.recyclerView.setBackgroundResource(R.mipmap.btn_login);
+        list.add(new MainItem(6,"数据库"));
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         CommandRecyclerAdapter adapter = new CommandRecyclerAdapter<MainItem>(getContext(), R.layout.fragment_test_item, list) {
             @Override
@@ -84,7 +84,7 @@ public class TestFragment extends Fragment {
 //                        startActivity(new Intent(mContext, MvvmTestActivity.class));
                         break;
                     case 2:
-                        ARouter.getInstance().build(RouterPath.MBase.PAGE_LOGIN).navigation();
+                        ARouter.getInstance().build(RouterPath_Test.PAGE_LEAK).navigation();
                         break;
                     case 3:
                         ARouter.getInstance().build(RouterPath_Test.PAGE_NETTEST).navigation();
