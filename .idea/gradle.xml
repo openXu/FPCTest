@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/../FpcLibsProject" />
             <option value="$PROJECT_DIR$/../FpcLibsProject/library_base" />
             <option value="$PROJECT_DIR$/../FpcLibsProject/library_db" />
+            <option value="$PROJECT_DIR$/../FpcLibsProject/library_res" />
             <option value="$PROJECT_DIR$/../FpcLibsProject/module_base" />
             <option value="$PROJECT_DIR$/../FpcLibsProject/module_inspection" />
           </set>

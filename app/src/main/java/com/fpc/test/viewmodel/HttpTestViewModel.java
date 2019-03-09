@@ -8,9 +8,9 @@ import com.fpc.test.bean.HttpQg;
 import com.fpc.test.bean.HttpQtBean;
 import com.fpc.test.bean.HttpQtListBean;
 import com.fzy.libs.base.BaseViewModel;
-import com.fzy.libs.http.NetworkManager;
-import com.fzy.libs.http.data.FzyResponse;
-import com.fzy.libs.http.rx.BaseOberver;
+import com.fzy.libs.net.NetworkManager;
+import com.fzy.libs.net.data.FzyResponse;
+import com.fzy.libs.net.rx.BaseOberver;
 import com.fzy.libs.utils.FLog;
 import com.google.gson.Gson;
 

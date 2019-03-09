@@ -1,7 +1,6 @@
 //app相关配置，app特有
 ext {
     appconfig = [
-            appType                    : "\"test\"",
             applicationId              : "com.fzy.test",
             /*app版本*/
             versionCode                : 13,
@@ -9,12 +8,9 @@ ext {
             appName                    : "\"领导监管\"",
 //            baseUrl                : "\"http://open.iciba.com/\"",
 //            baseUrl                : "\"http://dev.fpc119.com:8001/\"",
+
+            appType                    : "\"TYPE_TEST\"",
             baseUrl                : "\"http://47.105.168.178:8030/railway/\"",
-    ]
-    greendao = [
-            dbName       : "\"zs119.db\"",//数据库名称
-            schemaVersion: 2,//数据库版本号   20180123推送消息统一
-            daoPackage   : 'com.fzy.hbm.db.dao',//设置DaoMaster、DaoSession、Dao包名
-            targetGenDir : 'src/main/java'//设置DaoMaster、DaoSession、Dao目录
+
     ]
 }

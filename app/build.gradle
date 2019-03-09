@@ -1,45 +1,20 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion rootProject.ext.android.compileSdkVersion
-    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    rootProject.ext.setAndroidConfig android
+
     defaultConfig {
-        applicationId rootProject.ext.appconfig.applicationId
-        minSdkVersion rootProject.ext.android.minSdkVersion
-        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        applicationId "com.fzy.test"
         versionCode 1
-        versionName "1.0"
-
-
-        javaCompileOptions {
-            annotationProcessorOptions {
-                includeCompileClasspath = true
-            }
-        }
-        //阿里路由框架配置
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments = [AROUTER_MODULE_NAME: project.getName(), AROUTER_GENERATE_DOC: "enable"]
-            }
-        }
+        versionName '1.0.0'
     }
 
-    compileOptions {
-        sourceCompatibility rootProject.ext.android.javaVersion
-        targetCompatibility rootProject.ext.android.javaVersion
-    }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
-    //开启Data Binding
-    dataBinding {
-        enabled = true
-    }
-
 }
 
 dependencies {
@@ -47,21 +22,9 @@ dependencies {
     implementation project(':FpcLibsProject:library_base')
     implementation project(':FpcLibsProject:module_base')
     implementation project(':FpcLibsProject:module_inspection')
-    //butterKnife
-//    implementation rootProject.ext.dependencies["butterknife"]
-//    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
 
     //组件中依赖阿里路由编译框架
-//    implementation 'androidx.appcompat:appcompat:1.0.0-alpha1'
-//    implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
-//    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0-alpha1'
-    implementation 'androidx.appcompat:appcompat:1.0.0-alpha1'
-    implementation 'com.google.android.material:material:1.0.0-alpha1'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0-alpha1'
     annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
 
-}
-repositories {
-    mavenCentral()
+
 }
